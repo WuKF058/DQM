@@ -1,0 +1,10 @@
+ale_py==0.7.5
+gym==0.21.0
+matplotlib==3.11.0
+numpy==2.5.1
+pandas==3.0.3
+pennylane==0.45.1
+plotly==6.6.0
+qiskit==1.4.2
+qiskit_machine_learning==0.8.2
+torch==2.0.1
