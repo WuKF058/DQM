@@ -6,6 +6,10 @@
 [![Code](https://img.shields.io/badge/Code-GitHub-black)](https://github.com/WuKF058/DQM)
 
 Official implementation of the paper **"Privacy-Preserving Quantum Representation for Distributed Multi-Agent Reinforcement Learning in Coordinated Dispatch of Distribution Networks and Microgrids"**.
+<<<<<<< HEAD
+=======
+![图片描述](./img/Img1.png)
+>>>>>>> 954cdbbed8ab6cb1c185f221deceaf42e0709c57
 ---
 
 ## 📌 Problem Overview & Motivation
@@ -18,6 +22,29 @@ Coordinated economic dispatch between active distribution grids (DGs) and multip
 
 To solve these challenges, this paper presents **DQM (Decoupled Quantum Representation Mechanism)** seamlessly integrated with a **Dual-Privacy Split MARL (SL)** architecture.
 
+<<<<<<< HEAD
+=======
+---
+
+## 🔥 Key Contributions
+
+- **Split MARL Architecture (SL)**:
+  - Formulated under the Centralized Training with Decentralized Execution (CTDE) paradigm.
+  - Vertically splits local Critic networks into local feature extractors and a central server aggregator.
+  - Transmits perturbed intermediate representations (*smashed data*) to prevent raw operational data leakage and conceal heterogeneous local model architectures.
+- **Decoupled Quantum Representation Mechanism (DQM)**:
+  - Decouples quantum state representation from variational quantum circuit optimization.
+  - Utilizes a parameter-free Quantum Kernel (`ZZFeatureMap`) to capture non-linear spatiotemporal dependencies in Hilbert space.
+  - Introduces a Graph Laplacian Regularizer into the Critic loss, smoothing value function estimates without updating quantum parameters.
+  - Reduces average training time by **78%** compared to VQC architectures while completely avoiding barren plateaus.
+- **Nash Bargaining Team Reward**:
+  - Incorporates a Nash-inspired smooth bargaining team reward function to guide agents toward Pareto-efficient coordination and prevent monopolistic pricing strategies.
+- **Superconducting Quantum Hardware Deployment**:
+  - Verified the quantum kernel evaluation subroutine on the **"Origin Wukong" 180-qubit superconducting quantum processor** under realistic NISQ conditions.
+
+---
+
+>>>>>>> 954cdbbed8ab6cb1c185f221deceaf42e0709c57
 ## 🛠️ Framework Architecture
 
 ```text
