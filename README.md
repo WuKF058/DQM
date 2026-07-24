@@ -18,26 +18,6 @@ Coordinated economic dispatch between active distribution grids (DGs) and multip
 
 To solve these challenges, this paper presents **DQM (Decoupled Quantum Representation Mechanism)** seamlessly integrated with a **Dual-Privacy Split MARL (SL)** architecture.
 
----
-
-## 🔥 Key Contributions
-
-- **Split MARL Architecture (SL)**:
-  - Formulated under the Centralized Training with Decentralized Execution (CTDE) paradigm.
-  - Vertically splits local Critic networks into local feature extractors and a central server aggregator.
-  - Transmits perturbed intermediate representations (*smashed data*) to prevent raw operational data leakage and conceal heterogeneous local model architectures.
-- **Decoupled Quantum Representation Mechanism (DQM)**:
-  - Decouples quantum state representation from variational quantum circuit optimization.
-  - Utilizes a parameter-free Quantum Kernel (`ZZFeatureMap`) to capture non-linear spatiotemporal dependencies in Hilbert space.
-  - Introduces a Graph Laplacian Regularizer into the Critic loss, smoothing value function estimates without updating quantum parameters.
-  - Reduces average training time by **78%** compared to VQC architectures while completely avoiding barren plateaus.
-- **Nash Bargaining Team Reward**:
-  - Incorporates a Nash-inspired smooth bargaining team reward function to guide agents toward Pareto-efficient coordination and prevent monopolistic pricing strategies.
-- **Superconducting Quantum Hardware Deployment**:
-  - Verified the quantum kernel evaluation subroutine on the **"Origin Wukong" 180-qubit superconducting quantum processor** under realistic NISQ conditions.
-
----
-
 ## 🛠️ Framework Architecture
 
 ```text
