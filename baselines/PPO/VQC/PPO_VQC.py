@@ -1,18 +1,3 @@
-# ctde_pqc_a2c_microgrid_fast_4mg.py
-# CTDE (Centralized Training, Decentralized Execution) + QA2C_C
-# - 4 Microgrid agents (independent actors; decentralized execution)
-# - 1 DistributionGrid/market agent (actor)
-# - PQC Central Critic: V(s_global) using Qiskit & TorchConnector
-#
-# Coupling (per step):
-#   1) DG chooses buy/sell prices
-#   2) Broadcast prices to all 4 MGs via set_grid_price(buy, sell)
-#   3) Each MG acts and outputs its own grid_power
-#   4) Sum total_grid_power = sum(grid_power_i)
-#   5) Inject total_grid_power back to DG
-#
-# Plotting & Logging fully preserved.
-
 from __future__ import annotations
 
 import os
@@ -454,7 +439,7 @@ class CTDE_A2C_Trainer4MG:
         ]
         self.dg_opt = optim.Adam(self.dg_actor.parameters(), lr=cfg.actor_lr)
 
-        # 引入 Qiskit PQC 评价网络
+        # Import the critic network using Qiskit PQC.
         self.critic = PQCCentralCritic(
             global_dim=self.global_dim,
             n_qubits=cfg.n_qubits
